@@ -1,0 +1,46 @@
+body{
+  font-family: 'Droid Serif', serif;
+  background: linear-gradient(109.67deg, rgba(0, 0, 0, 0.92) 43.39%, #526CAD 100%);
+  
+    overflow-x: hidden;
+    
+
+}
+main{
+  background: white;
+}
+
+.roboto{
+  font-family: 'Droid Serif', serif;
+}
+.gradient-custom {
+  background: linear-gradient(111.37deg, rgba(0, 0, 0, 0.92) 36.71%, #526CAD 100%);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.gradient_blue{
+  background: linear-gradient(89.93deg, #45A0F5 1.2%, rgba(38, 227, 194, 0.88) 99.94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+}
+.dark{
+  background: black;
+}
+.white{
+  background-color: white;
+}
+.create_request{
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  border: none;
+}
+.footer{
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

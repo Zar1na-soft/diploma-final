@@ -1,0 +1,50 @@
+<body class="bgcolor">
+    
+    <div class="container-fluid">
+        <div class="row">
+    
+          <!-- левая колонка -->
+          <div class="col-lg-6 col-8 p-5 text-white">
+            
+            <form style="margin-top:80px" >
+                <h2 class=" text-center">Sign Up</h2>
+                  
+              <div class="form-group col-9 mx-auto p-2">
+                <label for="email" class="p-2">Enter Email address</label>
+                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control  text-dark rounded-4 " id="email" placeholder="Enter email">
+              </div>
+
+              <div class="form-group col-9 mx-auto p-2">
+                <label for="password" class="p-2">Create Password (6 or more charachters)</label>
+                <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control  text-dark rounded-4 " id="password" placeholder="Password">
+              </div>
+
+              <div class="form-group col-9 mx-auto  p-2" >
+                <label for="name" class="p-2">First Name</label>
+                <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control  text-dark rounded-4 " id="text" placeholder="Enter First Name">
+         </div> 
+              <div class="form-group col-9 mx-auto p-2">
+                <label for="name" class="p-2">Last Name</label>
+                <input type="text" [(ngModel)]="surname" [ngModelOptions]="{standalone: true}"class="form-control  text-dark rounded-4 " id="text" placeholder="Enter Last Name">
+         </div>
+
+              <div class="p-3 text-center col-9 mx-auto">
+                <button type="submit" class=" btn btn-info btn-lg rounded-4 w-75 " (click)="save()">Log In</button>
+              </div>
+              
+              <p class="text-center p-4 pb-0"> OR </p>
+              <div class="signup-link text-center">
+                  Have an account? <a href="#" [routerLink]="['/sign_in']" class="text-decoration-none">Sign In</a>
+              </div>
+        
+            </form>
+          </div>
+    
+          <!-- правая колонка -->
+          <div class="col-lg-6 col-4 p-0">
+            <img src="../../../../assets/images/jun-huang-qm6kMlBsV7k-unsplash.jpg" alt="placeholder image" class="img-fluid" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+          </div>
+        </div>
+      </div>
+      
+</body>

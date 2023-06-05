@@ -1,0 +1,9 @@
+.card-container {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    /* white-space: nowrap; */
+    max-height: 550px;
+  }
+  

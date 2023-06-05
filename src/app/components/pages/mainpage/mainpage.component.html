@@ -1,0 +1,49 @@
+<app-header></app-header>
+<main class="white">
+  <div class="ms-3">
+    <div class="row">
+      <div class="container col-5 col-lg-4">
+        <div class="d-flex justify-content-start pt-4">
+          <h3 class="fw-bold ms-3">Requests</h3>
+        </div>
+        <!-- card -->
+        <div *ngIf="petitions" class="card-container container" >
+          <div
+            class="card border border-end border-light-subtle rounded-5 bg-transparent my-4 p-2 "
+            style="width: 80%"
+            *ngFor="let petition of petitions|paginate:{
+              itemsPerPage:tableSize,
+              currentPage:page,
+              totalItems:count
+            }; let i = index" (click)="viewRequestDetails(petition)">
+            <div class="card-body" >
+              <h4 class="card-title">{{ petition.title }}</h4>
+              <h6 class="card-subtitle my-3 text-body-dark">{{ petition.address}}</h6>
+              <div class="d-flex my-3">
+                <p class="card-subtitle fs-6 text-body-dark">{{ petition.status }}</p>
+                <p class="card-subtitle fs-6 ps-5 text-body-secondary">{{ petition.createdAt | date: 'medium' }}</p>
+              </div>
+              <p class="card-subtitle">{{ petition.shortDescription}}</p>
+              <div class="d-flex justify-content-end mt-2">
+                <button class="d-flex btn align-items-left" type="button" (click)="likePetition(petition); $event.stopPropagation()">
+                  <p class="card-subtitle fs-6 text-body-secondary">Likes: {{ petition.likesNumber }}</p>
+                  <i class="ms-2 fa-solid fa-heart" [style.color]="petition.likedByThisUser ? '#000000' : ''"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="ms-5">
+            <pagination-controls
+            previousLabel="prev" nextLabel="next" (pageChange)="onTableDataChange($event)" ></pagination-controls>
+          </div>
+        </div>
+        
+      </div>
+      <!-- map -->
+      <div class="col-7 col-lg-8 position-relative" id="map" style="min-height: 680px; overflow: auto;">
+
+      </div>
+      <app-button-create></app-button-create>
+    </div>
+  </div>
+</main>

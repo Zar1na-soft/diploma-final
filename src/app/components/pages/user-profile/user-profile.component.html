@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container pt-5 pb-5">
+    <table class="table bg-light rounded-2 " style="margin-top: 7%" >
+        <thead>
+        <tr class="text-left fs-5 " >
+            <th scope="col" class="py-3 ">Issue</th>
+            <th scope="col" class="py-3 ">Requests</th>
+            <th scope="col" class="py-3 ">Status</th>
+            <th scope="col" class="py-3 ">Created</th>
+            <th scope="col" class="py-3 ">Feedback</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let petition of petitions" >
+            <th scope="row" style="width: 10%">{{ petition.petitionId}}</th>
+            <td style="width: 40%"  >
+                <div>
+                    <p class="mb-1">{{ petition.title }}</p>
+                    <p class="mb-1">{{petition.description}}</p>
+                    <p class="mb-1">{{petition.address}}</p>
+                    <p class="mb-1">Like numbers: {{petition.likesNumber}}</p>
+                </div>
+            </td>
+            <td><span class="text-warning d-inline" [ngClass]="{ 'text-warning': petition.status === 'OPEN', 'text-danger': petition.status === 'CLOSED'|| petition.status === 'DECLINED','text-success':petition.status==='ACCEPTED'}">{{petition.status}}</span></td>
+            <td>{{ petition.createdAt | date: 'medium' }}</td>
+            <td>{{petition.decisionDescription}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<app-foor></app-foor>

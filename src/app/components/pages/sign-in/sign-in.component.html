@@ -1,0 +1,44 @@
+<body class="bgcolor">
+    
+    <div class="container-fluid">
+        <div class="row">
+    
+          <!-- левая колонка -->
+          <div class="col-lg-6 col-8 p-5 text-white">
+            
+            <form style="margin-top:100px">
+                <h2 class=" text-center">Sign In</h2>
+              <div class="form-group p-2 col-9 mx-auto">
+                <label for="email" class="p-2">Email address</label>
+                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control  text-dark rounded-4 " id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group  p-2 col-9 mx-auto">
+                <label for="password" class="p-2">Password</label>
+                <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control  text-dark rounded-4 " id="password" placeholder="Password">
+                <a class= "text-decoration-none" href="#" > Forget password?</a>
+              </div>
+              <div>
+                <div id="g-signin-button"></div>
+              </div>
+              <div class="p-3 text-center col-9 mx-auto">
+                <button type="submit" (click)="Login()" class="btn btn-info btn-lg rounded-4 w-75 ">Log In</button>
+              </div>
+
+            
+              
+              <div class="signup-link text-center">
+                  Do not have an account? <a href="#" [routerLink]="['/sign_up']" class="text-decoration-none">Sign Up</a>
+              </div>
+        
+            </form>
+          </div>
+    
+          <!-- правая колонка -->
+          <div class="col-lg-6 col-4 p-0">
+            <img src="../../../../assets/images/jun-huang-qm6kMlBsV7k-unsplash.jpg" alt="placeholder image" class="img-fluid" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+          </div>
+
+        </div>
+      </div>
+      
+</body>
